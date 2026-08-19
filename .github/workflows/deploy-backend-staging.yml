@@ -74,7 +74,7 @@ jobs:
           fi
 
       - name: Sync code + restart staging backend
-        uses: appleboy/ssh-action@v1.0.3
+        uses: appleboy/ssh-action@v1.2.5
         with:
           host: 162.35.184.69
           username: root
@@ -144,7 +144,7 @@ jobs:
 
       - name: Rollback on failure
         if: failure()
-        uses: appleboy/ssh-action@v1.0.3
+        uses: appleboy/ssh-action@v1.2.5
         with:
           host: 162.35.184.69
           username: root
